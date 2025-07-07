@@ -6,7 +6,7 @@ const cors = require('cors');
 const fs = require('fs');
 
 const app = express();
-const port = 3047;
+const port = 3206;
 
 // Middleware
 app.use(cors());
@@ -301,5 +301,5 @@ app.delete('/api/applications', async (req, res) => {
 
 // Start server
 app.listen(port, () => {
-    console.log(`Server running at http://35.154.187.99:${port}`);
+    console.log(`Server running at http://3.85.61.23:${port}`);
 });
