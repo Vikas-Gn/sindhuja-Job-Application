@@ -5,7 +5,7 @@ services:
     image: postgres:14
     container_name: postgres-job
     ports:
-      - "5015:5432"
+      - "5206:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin123
@@ -18,7 +18,7 @@ services:
     build: ./Backend
     container_name: backend-job
     ports:
-      - "3047:3047"
+      - "3206:3206"
     depends_on:
       - postgres
     environment:
@@ -28,7 +28,7 @@ services:
     build: ./Employee-job
     container_name: Employee-job
     ports:
-      - "8059:80"
+      - "8012:80"
     depends_on:
       - backend
 
@@ -36,7 +36,7 @@ services:
     build: ./HR-job
     container_name: HR-job
     ports:
-      - "8060:80"
+      - "8013:80"
     depends_on:
       - backend
 
